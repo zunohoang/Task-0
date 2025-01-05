@@ -1,3 +1,43 @@
+<!--
+  Component hiển thị audio player
+  - Hiển thị phụ đề: SubtitlesDisplay
+  - Hiển thị audio controls: AudioControls
+  Ý tưởng:
+  - Tiền xử lý dữ liệu theo định dạng phù hợp để việc hiển thị phụ đề và highlight từng từ không mất thời gian
+      + Ưu điểm là việc tìm kiếm, highlight từng từ trong phụ đề sẽ nhanh chóng hơn
+      + Nhước điểm là thời điểm đầu tiên phải xử lý dữ liệu phụ đề và timestamp
+      -> E nhận thấy việc ưu điểm trên sẽ có lợi hơn só với nhược điểm mà nó mang lại
+  - Tạo một mảng lines để lưu trữ dữ liệu phụ đề nó sẽ dạng 
+    isHighlighted: true/false để xác định từ đang được highlight hay không
+    VD: lines:
+    [
+      {
+        row: [
+          { word: "Chào", isHighlighted: false },
+          { word: "", isHighlighted: false },
+          { word: "bạn", isHighlighted: false },
+          { word: "!", isHighlighted: false },
+           // Tách từ ra như này tùy thuộc vào dữ liệu ở timestamp
+          ...
+        ],
+        user: "A"  // yêu câu thì mình chỉ cần đánh chẵn lẽ để xác định A hay B nhưng nếu dữ liệu nhiều người hơn thì e sử dụng thêm trường user này
+      },
+      ...
+    ]
+  - Tạo một Map để tối ưu hóa tìm kiếm dạng <index, {lineIndex, wordIndex}> để lưu vị trí của từng từ trong lines (với index là timestamp.index)
+  - Lắng nghe currentTime thay đổi thì sẽ cập nhật highlights cho từng từ
+-->
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
+
 <script setup>
 import { ref, onMounted, watch } from "vue";
 import { Howl } from "howler";
