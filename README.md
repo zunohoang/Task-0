@@ -123,17 +123,17 @@ Component hiển thị audio player
   ```json
   [
     {
-      row: [
-        { word: "Chào", isHighlighted: false },
-        { word: "", isHighlighted: false },
-        { word: "bạn", isHighlighted: false },
-        { word: "!", isHighlighted: false },
+      "row": [
+        { "word": "Chào", "isHighlighted": false },
+        { "word": "", "isHighlighted": false },
+        { "word": "bạn", "isHighlighted": false },
+        { "word": "!", "isHighlighted": false }
+        // ...
         // Tách từ ra như này tùy thuộc vào dữ liệu ở timestamp
-        ...
       ],
-      user: "A" // yêu câu thì mình chỉ cần đánh chẵn lẽ để xác định A hay B nhưng nếu dữ liệu nhiều người hơn thì e sử dụng thêm trường user này
-    },
-    ...
+      "user": "A" // yêu câu thì mình chỉ cần đánh chẵn lẽ để xác định A hay B nhưng nếu dữ liệu nhiều người hơn thì e sử dụng thêm trường user này
+    }
+    // ...
   ]
   ```
 
