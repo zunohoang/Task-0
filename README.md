@@ -99,7 +99,7 @@ npm run dev
 
 Thư viện ngoài sử dụng: `howler` để xử lý audio.
 
-E có chỉnh sửa lại index và timeElapsed, yêu cầu đề bảo sửa index nhưng mà e nhận thấy thời gian audio là 31.5s và thời gian từ cuối được highlight là 32.3s nó gây chênh lệch và không highlight được nên em có hiệu chỉnh lại dữ liệu thời gian trong timeElapsed thành timeElapsed \* (32.3 / 31.5), thử nghiệm thì thấy phù hợp
+E có chỉnh sửa lại index và timeElapsed, yêu cầu đề bảo sửa index nhưng mà e nhận thấy thời gian audio là 31.5s và thời gian từ cuối được highlight là 32.3s nó gây chênh lệch và không highlight được nên em có hiệu chỉnh lại dữ liệu thời gian trong timeElapsed thành timeElapsed / (32.3 / 31.5), thử nghiệm thì thấy phù hợp
 
 #### Cách xử lý:
 
